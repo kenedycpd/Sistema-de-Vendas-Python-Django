@@ -1,0 +1,37 @@
+{% extends "index.html" %}
+{% load widget_tweaks %}
+
+<div class="row">
+
+	{% block body %}
+    <br>
+	<br>
+	<h1>Cadastro de Produtos</h1>
+    <form method="post">
+    	{% csrf_token %}
+
+    	
+        
+        <div class="form-group">
+    	<label for="{{ form.cadastro.id_for_label }}">Cadastro de Produtos:</label>
+    	{{ form.cadastro|add_class:"form-control" }}
+    	</div>
+
+    	
+
+    	
+    	<div class="form-group">
+    	<label for="{{ form.preco.id_for_label }}">Cadastrar Preço:</label>
+    	{{ form.preco|add_class:"form-control" }}
+    	</div>
+         
+         
+    	<div class="form-group">
+        <button class="btn btn-success" type="submit">Salvar Cadastro</button>
+		<a href="{% url 'home' %}" class="btn btn-info" type="submit">Voltar</a>
+	    </div>
+
+    </form>
+	{% endblock body %}
+
+</div>

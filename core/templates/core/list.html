@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block body %}
+<br>
+<table class="table table-hover">
+			<thead><!--cabecario da tabela-->
+				<tr>
+					<th>Nº do Pedido</th>
+					<th>Produtos</th>
+					<th>Quantidade</th>
+					<th>Status do Pedido</th>
+					
+				</tr>
+			</thead>
+			<tbody><!--corpo da tabela-->
+			{% for l in list %}
+
+				<tr class="bg-success" style="color:#fff;">
+				<td>#000{{ l.id }}</td>
+				<td>{{ l.comprar }}</td>
+				<td>{{ l.quanty }}</td>
+				<td><p>Fechado</p></td>
+				</tr>
+				
+			{% endfor %}
+				
+			</tbody>
+		</table>
+	
+	
+{% endblock body %}

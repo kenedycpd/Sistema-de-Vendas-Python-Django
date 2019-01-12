@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+{% load widget_tweaks %}
+
+<div class="row">
+
+	{% block body %}
+    <br>
+	<br>
+	<h1>Comprar Produtos</h1>
+    <form method="post">
+    	{% csrf_token %}
+
+    	
+        
+        <div class="form-group">
+        <label for="{{ form.comprar.id_for_label }}">Selecione Seu Produto:</label>
+        {{ form.comprar|add_class:"form-control" }}
+        </div>
+
+        <div class="form-group">
+    	<label for="{{ form.quanty.id_for_label }}">Digite Quantidade:</label>
+    	{{ form.quanty|add_class:"form-control" }}
+    	</div>
+         
+         
+    	<div class="form-group">
+        <button class="btn btn-success" type="submit">Adicionar Produtos</button>
+		<a href="{% url 'lista' %}" class="btn btn-info" type="submit">Finalizar Pedido</a>
+	    </div>
+
+    </form>
+	{% endblock body %}
+
+</div>

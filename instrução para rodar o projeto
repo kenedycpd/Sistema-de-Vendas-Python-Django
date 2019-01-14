@@ -5,7 +5,7 @@ django-widget-tweaks==1.4.3
 pytz==2018.9
 Python 3.6.1
 
-instalado as dependencias, rodar o arquivo manage.py
+instalado as dependencias, executar o arquivo manage.py
 
 acessar administração para cadastrar produtos e preços
 usuario comprador: admin
